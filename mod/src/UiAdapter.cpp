@@ -2042,7 +2042,7 @@ bool AttachOrRefreshToggle(const Xaml::DependencyObject& page) {
             bufferInput, Localized(L"硬件缓冲区（毫秒）", L"Hardware buffer in milliseconds"));
         Automation::AutomationProperties::SetHelpText(
             bufferInput, Localized(L"请输入 1 到 100 之间的整数",
-                                   L"Enter an integer from 1 through 100"));
+                                   L"Enter an integer from 1 through 500"));
         Controls::Button bufferApply;
         bufferApply.Content(box_value(Localized(L"确定", L"Apply")));
         bufferApply.MinWidth(72.0);
