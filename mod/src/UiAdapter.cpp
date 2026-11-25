@@ -758,7 +758,7 @@ void CommitHardwareBuffer(const Controls::TextBox& input) {
     const std::wstring text = input.Text().c_str();
     wchar_t* end{};
     const auto value = wcstoul(text.c_str(), &end, 10);
-    if (end == text.c_str() || *end != L'\0' || value < 1 || value > 100) {
+    if (end == text.c_str() || *end != L'\0' || value < 1 || value > 1000) {
         Log(L"hardware buffer edit rejected value=" + text);
         const auto saved = StatusSnapshot().hardwareBufferMs;
         g_hardwareBufferInputDirty.store(false);
@@ -2042,7 +2042,7 @@ bool AttachOrRefreshToggle(const Xaml::DependencyObject& page) {
             bufferInput, Localized(L"硬件缓冲区（毫秒）", L"Hardware buffer in milliseconds"));
         Automation::AutomationProperties::SetHelpText(
             bufferInput, Localized(L"请输入 1 到 100 之间的整数",
-                                   L"Enter an integer from 1 through 500"));
+                                   L"Enter an integer from 1 through 1000"));
         Controls::Button bufferApply;
         bufferApply.Content(box_value(Localized(L"确定", L"Apply")));
         bufferApply.MinWidth(72.0);
