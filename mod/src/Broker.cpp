@@ -21,9 +21,9 @@
 
 namespace {
 
-constexpr std::uint32_t kDefaultHardwareBufferMs = 20;
+constexpr std::uint32_t kDefaultHardwareBufferMs = 500;
 constexpr std::uint32_t kMinimumHardwareBufferMs = 1;
-constexpr std::uint32_t kMaximumHardwareBufferMs = 100;
+constexpr std::uint32_t kMaximumHardwareBufferMs = 1000;
 
 std::filesystem::path BrokerIniPath();
 
